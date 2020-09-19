@@ -6,8 +6,6 @@
 
 # Budget-Tracker
 
-## Deployed Site: https://gentle-basin-41093.herokuapp.com/
-
 ## Description
 
  Budget Tracker is a Progressive Web Application that helps the user hold a budget.  It has online and offline capability as well should internet connection be lost.  If connection is lost it will update the database when it gets an online connection again.
