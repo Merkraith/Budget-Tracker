@@ -3,15 +3,13 @@ const path = require("path");
 
 const config = {
   entry: {
-    app: "./assets/js/index.js",
-    favorites: "./assets/js/favorites.js",
-    topic: "./assets/js/topic.js"
+    mode: "development",
+    app: "./public/index.js",
   },
   output: {
     path: __dirname + "/dist",
-    filename: "[name].bundle.js"
+    filename: "app.bundle.js"
   },
-  mode: "development",
   module: {
     rules: [
       {
@@ -28,15 +26,15 @@ const config = {
   },
   plugins: [
     new WebpackPwaManifest({
-      name: "Newsy app",
-      short_name: "Newsy",
-      description: "An application that allows you to view different news articles and save your favorites.",
+      name: "Budget-Tracker",
+      short_name: "Budget App",
+      description: "An app for managing a budget with the users ",
       background_color: "#01579b",
       theme_color: "#ffffff",
       "theme-color": "#ffffff",
-      start_url: "/",
+      start_url: "/index.html",
       icons: [{
-        src: path.resolve("assets/images/icons/android-chrome-192x192.png"),
+        src: path.resolve("public/icons/icon-192x192.png"),
         sizes: [96, 128, 192, 256, 384, 512],
         destination: path.join("assets", "icons")
       }]
